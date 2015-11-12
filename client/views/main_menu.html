@@ -7,11 +7,22 @@
 	  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!--High Charts-->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="/js/static/3Dcharts.js"></script>
+    <script src="/js/static/pieChart.js"></script>
+    <script src="/js/static/draggablebox.js"></script>
+    
     <style type="text/css">
     .nav-tabs li{
       font-size: 30px;
       width: 16%;
-    } 
+    }
+   
     </style>
   </head>
   <body>
@@ -28,17 +39,145 @@
     </div>
   </nav>
 
-
   <div class="container">
   <h3>Tabs</h3>
   <ul class="nav nav-tabs">
-    <li class="active"><a href="#">Profile</a></li>
-    <li><a href="#">Sales</a></li>
-    <li><a href="#">Purchase</a></li>
-    <li><a href="#">Production</a></li>
-    <li><a href="#">Transport</a></li>
-    <li><a href="#">Finance</a></li>
+    <li class="active"><a data-toggle="tab" href="#profile">Profile</a></li>
+    <li><a data-toggle="tab" href="#sales">Sales</a></li>
+    <li><a data-toggle="tab" href="#purchase">Purchase</a></li>
+    <li><a data-toggle="tab" href="#production">Production</a></li>
+    <li><a data-toggle="tab" href="#transport">Transport</a></li>
+    <li><a data-toggle="tab" href="#finance">Finance</a></li>
   </ul>
+
+  <div class="tab-content">
+    <div id="profile" class="tab-pane fade in active">
+    <!--/////////////////////////////////Profile Content/////////////////////////////////////////////////////////////////////////////////////////////-->  
+      <script type="text/javascript" src="/js/static/profile.js"></script>
+      <style type="text/css" src="/css/profile.css"></style>
+      <div class="container">
+        <div class="row">
+          <div style="width:100%; height:20px;">
+         </div>
+         <div class="col-xs-12">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Sheena Kristin A.Eschor</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" class="img-circle img-responsive"> </div>
+               
+                <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>Department:</td>
+                        <td>Programming</td>
+                      </tr>
+                      <tr>
+                        <td>Hire date:</td>
+                        <td>06/23/2013</td>
+                      </tr>
+                      <tr>
+                        <td>Date of Birth</td>
+                        <td>01/24/1988</td>
+                      </tr>
+
+                      <tr>
+                       <tr>
+                        <td>Gender</td>
+                        <td>Male</td>
+                      </tr>
+                      <tr>
+                        <td>Home Address</td>
+                        <td>Metro Manila,Philippines</td>
+                      </tr>
+                      <tr>
+                        <td>Email</td>
+                        <td><a href="mailto:info@support.com">info@support.com</a></td>
+                      </tr>
+                      <td>Phone Number</td>
+                      <td>123-4567-890(Landline)<br><br>555-4567-890(Mobile)
+                      </td>
+
+                    </tr>
+
+                  </tbody>
+                </table>                
+                
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-4"></div>
+              <div class="col-xs-4">
+                <a href="#" class="btn btn-primary" style="width:100%;">Edit Profile</a>
+              </div>
+              <div class="col-xs-4"></div>              
+            </div>
+          </div>
+          <div class="panel-footer">
+            
+          </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div style="width:100%; height:20px;">
+        </div>
+        <div class="col-xs-12">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Current Performence</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">                
+                <div id="container" style="height: 400px"></div>
+                <div style="height:100px;width:100%;"></div>               
+              </div>
+
+              <div class="row">                
+                <div class="col-xs-6"><div id="piechart" style="height: 400px"></div></div>
+                <div class="col-xs-6"><div id="draggablebox" style="height: 400px"></div></div>               
+              </div>
+            </div>
+            <div class="panel-footer">
+              
+            </div>            
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!--/////////////////////////////////Profile Content End/////////////////////////////////////////////////////////////////////////////////////////////-->  
+
+    </div>
+    <div id="sales" class="tab-pane fade">
+      <h3>Menu 1</h3>
+      <p>Some content in menu 1.</p>
+    </div>
+    <div id="purchase" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Some content in menu 2.</p>
+    </div>
+    <div id="production" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Some content in menu 2.</p>
+    </div>
+    <div id="transport" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Some content in menu 2.</p>
+    </div>
+    <div id="finance" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Some content in menu 2.</p>
+    </div>
+  </div>
+
 </div>
 
   </body>
