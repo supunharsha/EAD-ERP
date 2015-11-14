@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"
+	type="text/javascript"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+	type="text/javascript"></script>
+
+
+
+<!--High Charts-->
+<!--   <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="/js/static/3Dcharts.js"></script>
+    <script src="/js/static/pieChart.js"></script>
+    <script src="/js/static/draggablebox.js"></script> -->
+
+<!-- DataTables-->
+<!-- <link rel="stylesheet" href="http://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css">
+	<script src="http://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script> -->
+
+
+<!--Financial module-->
+
+<link rel="stylesheet" type="text/css" href="/css/finance.css">
+
+</head>
+<body>
+	<nav class="navbar navbar-inverse  navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Minions ERP System</a>
+			</div>
+			<div>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/views/index.html"><span
+							class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<h3>Tabs</h3>
+		<ul class="nav nav-tabs">
+			<li class="active"><a data-toggle="tab" href="#profile">Finance</a></li>
+			<li><a data-toggle="tab" href="#sales">Sales</a></li>
+			<li><a data-toggle="tab" href="#purchase">Purchase</a></li>
+			<li><a data-toggle="tab" href="#production">Production</a></li>
+			<li><a data-toggle="tab" href="#transport">Transport</a></li>
+			<li><a data-toggle="tab" href="#finance">Profile</a></li>
+		</ul>
+
+		<div class="tab-content">
+			<div id="profile" class="tab-pane fade in active">
+				<!-----------------------Home page Content -------------------------------------->
+
+				<div class="container">
+					<div class="row">
+						<div id="new-raw"></div>
+						<div class="col-xs-12">
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h3 class="panel-title">Welcome to Financial Section</h3>
+								</div>
+								<div class="panel-body">
+									<div class="row">
+
+
+										<div class="col-sm-3 col-md-3">
+											<div class="panel-group" id="accordion">
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion"
+																href="#collapseOne"><span
+																class="glyphicon glyphicon-folder-close"> </span>Assert</a>
+														</h4>
+													</div>
+													<div id="collapseOne" class="panel-collapse collapse in">
+														<div class="panel-body">
+															<table class="table">
+																<tr>
+																	<td><span
+																		class="glyphicon glyphicon-usd text-primary"></span><a
+																		id="assert1" href="#" onclick="aF1();return false;">Cash
+																			in hand</a></td>
+																</tr>
+
+																<tr>
+																	<td><span
+																		class="glyphicon glyphicon-usd text-primary"></span> <a
+																		href="#" onclick="aF2();return false;">Cash in
+																			Bank</a></td>
+																</tr>
+																<tr>
+																	<td><span
+																		class="glyphicon glyphicon-home text-success"></span><a
+																		href="#" onclick="aF3();return false;">Fixed Asserts</a></td>
+																</tr>
+																<tr>
+																	<td><span
+																		class="glyphicon glyphicon-wrench text-success"></span><a
+																		href="#" onclick="aF4();return false;">Recoverables</a></td>
+																</tr>
+
+															</table>
+														</div>
+													</div>
+												</div>
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion"
+																href="#collapseTwo"><span
+																class="glyphicon glyphicon-th"> </span>Liability</a>
+														</h4>
+													</div>
+													<div id="collapseTwo" class="panel-collapse collapse">
+														<div class="panel-body">
+															<table class="table">
+																<tr>
+																	<td><a id="assert1" href="#">Payment</a> <span
+																		class="label label-success">$ 320</span></td>
+																</tr>
+
+																<tr>
+																	<td><a href="#">Debt</a></td>
+																</tr>
+																<tr>
+																	<td><a href="#">Obligation</a></td>
+																</tr>
+																<tr>
+																	<td><a href="#">Income Taxes</a></td>
+																</tr>
+
+															</table>
+														</div>
+													</div>
+												</div>
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion"
+																href="#collapseThree"><span
+																class="glyphicon glyphicon-usd"> </span>Income</a>
+														</h4>
+													</div>
+													<div id="collapseThree" class="panel-collapse collapse">
+														<div class="panel-body">
+															<table class="table">
+																<tr>
+																	<td><a href="#">Sales</a></td>
+																</tr>
+																<tr>
+																	<td><a href="#">Service revenues</a> <span
+																		class="label label-info">5</span></td>
+																</tr>
+																<tr>
+																	<td><a href="#">Salary Excpense</a></td>
+																</tr>
+
+															</table>
+														</div>
+													</div>
+												</div>
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion"
+																href="#collapseFour"><span
+																class="glyphicon glyphicon-file"> </span>Equity</a>
+														</h4>
+													</div>
+													<div id="collapseFour" class="panel-collapse collapse">
+														<div class="panel-body">
+															<table class="table">
+																<tr>
+																	<td><span class="glyphicon glyphicon-usd"></span><a
+																		href="#">Sales</a></td>
+																</tr>
+																<tr>
+																	<td><span class="glyphicon glyphicon-user"></span><a
+																		href="#">Customers</a></td>
+																</tr>
+
+															</table>
+														</div>
+													</div>
+												</div>
+
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion"
+																href="#collapseFive"><span
+																class="glyphicon glyphicon-file"> </span>Reports</a>
+														</h4>
+													</div>
+													<div id="collapseFive" class="panel-collapse collapse">
+														<div class="panel-body">
+															<table class="table">
+																<tr>
+																	<td><span class="glyphicon glyphicon-usd"></span><a
+																		href="#" onclick="bRe();return false;">Bank Reconciliation</a></td>
+																</tr>
+																<tr>
+																	<td><span class="glyphicon glyphicon-user"></span><a
+																		href="#" onclick="fSt();return false;">Financial Statement</a></td>
+																</tr>
+																<tr>
+																	<td><span class="glyphicon glyphicon-tasks"></span><a
+																		href="#">Products</a></td>
+																</tr>
+																<tr>
+																	<td><span
+																		class="glyphicon glyphicon-shopping-cart"></span><a
+																		href="#">Shopping Cart</a></td>
+																</tr>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="col-sm-9 col-md-9">
+
+											<div id="showDiv"></div>
+
+
+
+											<div class="well" id="wellHide">
+												<h1 id="h1color">Welcome to the Genaral journal</h1>
+												<img class="img-rounded img-responsive"
+													src="images/business-background.jpg" alt="accounting"
+													style="width: 775px; height: 300px"margin:15px;>
+
+
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div></div>
+
+
+	<!-- 
+    <div class="container">
+      <div class="row">
+        <div id="new-raw">
+        </div>
+        <div class="col-xs-12">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Current Performence</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">  
+              
+                             
+              </div>   
+            </div>
+            <div class="panel-footer">
+              
+            </div>            
+          </div>
+        </div>
+      </div>
+    </div> -->
+	<!-----------------------End of Home page Content -------------------------------------->
+
+
+
+	<div id="sales" class="tab-pane fade">
+		<h3>Menu 1</h3>
+		<p>Some content in menu 1.</p>
+	</div>
+	<div id="purchase" class="tab-pane fade">
+		<h3>Menu 2</h3>
+		<p>Some content in menu 2.</p>
+	</div>
+	<div id="production" class="tab-pane fade">
+		<h3>Menu 2</h3>
+		<p>Some content in menu 2.</p>
+	</div>
+	<div id="transport" class="tab-pane fade">
+		<h3>Menu 2</h3>
+		<p>Some content in menu 2.</p>
+	</div>
+	<div id="finance" class="tab-pane fade">
+		<h3>Menu 2</h3>
+		<p>Some content in menu 2.</p>
+	</div>
+	<div></div>
+
+	<div></div>
+
+	<script type="text/javascript">
+		function aF1() {
+
+		loadContent("financial-p1");
+			
+		}
+		function aF2() {
+		
+			loadContent("financial-p2");
+		
+		}
+		function aF3() {
+		
+			loadContent("financial-p3");
+			
+		}
+		function aF4() {
+			loadContent("financial-p3");
+			
+		
+		}
+		function bRe() {
+			loadContent("financial-bRe");
+			
+		
+		}
+		function fSt() {
+			loadContent("financial-bSt");
+			
+		}
+		
+		function loadContent(loadContent) {
+			//alert(loadContent);
+			console.log(loadContent);
+			$('#showDiv').hide();
+			$('#wellHide').hide();
+			$('#showDiv').load("/"+loadContent);
+			$('#showDiv').show(1000);
+
+		}
+
+	/*	$("#assert1").click(function() {
+		
+		     alert("Hello node");
+			console.log("Hello node");
+		
+		 });
+		 
+		 */
+
+//$(document).ready(function() {
+  //  alert($('#assert1').attr('id'));
+//}); 		 
+
+		
+		
+	</script>
+
+
+
+</body>
+</html>

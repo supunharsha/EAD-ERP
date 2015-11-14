@@ -1,0 +1,36 @@
+.nav-tabs li {
+	font-size: 30px;
+	width: 16%;
+}
+
+#new-raw {
+	width: 100%;
+	height: 20px;
+}
+
+.glyphicon {
+	margin-right: 10px;
+}
+
+.panel-body table tr td {
+	padding-left: 15px
+}
+
+.panel-body .table {
+	margin-bottom: 0px;
+}
+
+#h1color {
+
+font-family:serif;
+color: blue;
+
+}
+
+.td {
+	display: table-cell;
+	padding: 15px;
+	border: 1px solid #ddd;
+	border-top: none;
+	border-left: none;
+}
