@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"
+	type="text/javascript"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+	type="text/javascript"></script>
+
+<link rel="stylesheet" type="text/css" href="/css/finance.css">
+
+</head>
+<body>
+	<nav class="navbar navbar-inverse  navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Minions ERP System</a>
+			</div>
+			<div>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/views/index.html"><span
+							class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<h3>Tabs</h3>
+		<ul class="nav nav-tabs">
+			<li class="active"><a data-toggle="tab" href="#hr">HR</a></li>
+			<li><a data-toggle="tab" href="#sales">Sales</a></li>
+			<li><a data-toggle="tab" href="#purchase">Purchase</a></li>
+			<li><a data-toggle="tab" href="#production">Production</a></li>
+			<li><a data-toggle="tab" href="#finance">Finance</a></li>
+			<li><a data-toggle="tab" href="#profile">Profile</a></li>
+		</ul>
+
+		<div class="tab-content">
+			<div id="profile" class="tab-pane fade in active">
+				<!-----------------------Home page Content -------------------------------------->
+
+				<div class="container">
+					<div class="row">
+						<div id="new-raw"></div>
+						<div class="col-xs-12">
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h3 class="panel-title">Welcome to Human Resources Section</h3>
+								</div>
+								<div class="panel-body">
+									<div class="row">
+
+
+										<div class="col-sm-3 col-md-3">
+											<div class="panel-group" id="accordion">
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion"
+																href="#collapseOne"><span
+																class="glyphicon glyphicon-folder-close"> </span>Employee Information</a>
+														</h4>
+													</div>
+													<div id="collapseOne" class="panel-collapse collapse in">
+														<div class="panel-body">
+															<table class="table">
+                                                                <tr>                                                                  
+																	<td><a id="assert1" href="employeedetails" target="_blank">Employee Details</a></td>
+																</tr>
+																<tr>
+                                                                   <!-- <td><a id="assert1" href="#" onclick="editprofile();return false;">Edit Profile</a></td>-->
+																	<td><a id="assert1" href="editprofile" target="_blank">Add Employee</a></td>
+																</tr>
+																<tr>
+																	<td><a id="assert1" href="#" onclick="jobform();return false;">Job Application Form</a></td>
+																</tr>
+																<tr>
+																	<td><a id="assert1" href="#" onclick="feedback();return false;">Feedback Form</a></td>
+																</tr>	
+															</table>
+														</div>
+													</div>
+												</div>
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion"
+																href="#collapseTwo"><span
+																class="glyphicon glyphicon-th"> </span>Training</a>
+														</h4>
+													</div>
+													<div id="collapseTwo" class="panel-collapse collapse">
+														<div class="panel-body">
+															<table class="table">
+																<tr>
+																	<td style="height: 23px"><a id="assert1" href="#" onclick="technical();return false;">Technical Development</a></td>															</tr>
+																<tr>
+																	<td><a id="assert1" href="#" onclick="personal();return false;">Personal Development</a></td>																</tr>
+																<!--<tr>
+																	<td><a id="assert1" href="#" onclick="career();return false;">Career Guidance</a></td>
+																</tr>
+																<tr>
+																	<td><a id="assert1" href="#" onclick="lms();return false;">Learning Management System</a></td>																</tr>-->
+															</table>
+														</div>
+													</div>
+												</div>
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion"
+																href="#collapseThree"><span
+																class="glyphicon glyphicon-usd"> </span>Payroll Administration</a>
+														</h4>
+													</div>
+													<div id="collapseThree" class="panel-collapse collapse">
+														<div class="panel-body">
+															<table class="table">
+																<tr>																	
+																	<td><a id="assert1" href="#" onclick="pay();return false;">Pay calculation</a></td>	
+																</tr>
+                                                                <tr>																	
+																	<!--<td><a id="assert1" href="attendance" target="_blank">Attendance records</a></td>-->
+                                                                    <td><a id="assert1" href="#" onclick="attendance();return false;">Attendance records</a>	
+																</tr>
+																
+															</table>
+														</div>
+													</div>
+												</div>
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion"
+																href="#collapseFour"><span
+																class="glyphicon glyphicon-file"> </span>Employee Resourcing</a>
+														</h4>
+													</div>
+													<div id="collapseFour" class="panel-collapse collapse">
+														<div class="panel-body">
+															<table class="table">
+																<tr>
+																	<td><a id="assert1" href="#" onclick="rec();return false;">Recruitment</a></td>
+																</tr>
+																<tr>
+																	<td><a href="#">Selection</a></td>
+																</tr>
+
+															</table>
+														</div>
+													</div>
+												</div>
+
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a data-toggle="collapse" data-parent="#accordion"
+																href="#collapseFive"><span
+																class="glyphicon glyphicon-file"> </span>Employee Health and Safety</a>
+														</h4>
+													</div>
+													<div id="collapseFive" class="panel-collapse collapse">
+														<div class="panel-body">
+															<table class="table">
+																<tr>
+																	<td><a href="#" onclick="employee();return false;">Employee's rights and responsibilities</a></td>
+																</tr>
+																<tr>
+																	<td><a href="#" onclick="employer();return false;">Employer's responsibilities</a></td>
+																</tr>
+																																
+															</table>
+														</div>
+													</div>
+                                                    
+                                                    <div class="panel panel-default">
+												</div>
+												</div>
+											</div>
+
+										</div>
+
+										<div class="col-sm-9 col-md-9">
+											<div id="showDiv"></div>
+											<div class="well" id="wellHide">
+												<h1 id="h1color">Human Resource Management</h1>
+                                                <div>
+      												<img src="/images/hrcover.jpg" width="100%" height="150px" alt="hrcover" /><hr />
+     											</div>
+                                                <h4><font color="#660066">Our aim is to create a productive and employee oriented workplace with the use of energized employees. Human resource is the biggest asset in any organization which plays an essential role in developing a company's strategy and handling employee-centered activities.</font></h4>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>                         
+    
+	<script type="text/javascript">
+	/////employee infromation
+		function editprofile() {
+			loadContent("editprofile");			
+		}
+        function employeedetails() {
+			loadContent("employeedetails");			
+		}
+		
+	/////training
+		function technical() {		
+			loadContent("technical");		
+		}
+		function personal() {		
+			loadContent("personal");			
+		}
+		function career() {
+			loadContent("career");		
+		}
+		function lms() {
+			loadContent("lms");	
+		}
+	/////job application
+		function jobform() {
+			loadContent("jobform");	
+		}
+		///pay roll
+		function pay() {
+			loadContent("pay");	
+		}
+        function attendace() {
+			loadContent("attendance");	
+		}
+     	 //feedback form
+      	function feedback() {
+			loadContent("feedback");	
+		}
+		//health employee
+		function employee() {
+			loadContent("employee");	
+		}
+		function employer() {
+			loadContent("employer");	
+		}
+		////resoucrcing
+		function rec() {
+			loadContent("rec");	
+		}
+
+		
+		function loadContent(loadContent) {
+			//alert(loadContent);
+			console.log(loadContent);
+			$('#showDiv').hide();
+			$('#wellHide').hide();
+			$('#showDiv').load("/"+loadContent);
+			$('#showDiv').show(1000);
+
+		}
+
+	/*	$("#assert1").click(function() {
+		
+		     alert("Hello node");
+			console.log("Hello node");
+		
+		 });
+		 
+		 */
+
+//$(document).ready(function() {
+  //  alert($('#assert1').attr('id'));
+//}); 	
+	</script>
+</body>
+</html>

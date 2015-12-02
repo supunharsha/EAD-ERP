@@ -1,5 +1,5 @@
 {
-  "name": "EAD-ERP",
+  "name": "meanhr",
   "version": "1.0.0",
   "dependencies": {
     "body-parser": "^1.14.1",
