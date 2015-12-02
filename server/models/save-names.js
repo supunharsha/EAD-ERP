@@ -1,5 +1,11 @@
 var mongoose = require('mongoose');
 
 module.exports=mongoose.model( 'NameList',{
-	name:String
+    id:String,
+	fname:String,
+    lname:String,
+    title:String,
+    department:String,
+    employeeStatus:String,
+    email:String
 });
