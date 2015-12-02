@@ -1,13 +1,15 @@
-var Model= require('../models/save-names');
+var Model= require('../models/new-user');
 
 
-module.exports.create=function(req,res){
+module.exports.addUsers=function(req,res){
 	console.log(req.body);
-	var modelObject=new Model(req.body);
-	modelObject.save(function (result){
-		// if(err)
-		// 	console.log(err)
-		// else
+	 var modelObject=new Model(req.body);
+
+	 modelObject.save(function(err,result){
+	 	//console.log(err+' '+result);
+		if(err)
+			console.log(err)
+		else
 			res.json(result)
 	});
 }

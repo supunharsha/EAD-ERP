@@ -5,16 +5,18 @@ var express          = require('express'),
 	//reload 			 = require('reload'),
     app     	     = express();	
 	
-//mongoose.connect('mongodb://localhost:27017/mean-demo');
+mongoose.connect('mongodb://localhost:27017/mean-demo');
 app.use(bodyParser());
-	
+
 app.get('/',function(req,res){
-	//console.log(req);
 	res.sendFile(__dirname+'/client/views/index.html');
 });
+app.get('/signup.html',function(req,res){
+	res.sendFile(__dirname+'/client/views/signup.html');
+});
 
-app.post('/api/names',serverController.create);
-app.get('/api/names',serverController.list);
+app.post('/api/newusers',serverController.addUsers);
+//app.get('/api/names',serverController.list);
 
 app.use(express.static('client'));
 
