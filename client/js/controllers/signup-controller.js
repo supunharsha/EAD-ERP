@@ -11,6 +11,9 @@ app.controller('signupCtrl',['$scope','$resource', function($scope,$resource) {
 
 	$scope.createUser=function(){
 
+
+		$('#myModal').modal();
+
 		//console.log($scope.name+' '+$scope.email+' '+$scope.password+' '+$scope.access);
 		var Db 		=new Dbcall();
 
