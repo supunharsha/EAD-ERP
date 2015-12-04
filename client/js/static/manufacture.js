@@ -13,7 +13,7 @@ $(function () {
             }
         },
         title: {
-            text: 'Last Month Total Manufacturing'
+            text: 'Current Year Total Manufacturing.'
         },
         subtitle: {
             text: 'Values are displayed in 100 scale'
@@ -21,7 +21,7 @@ $(function () {
         plotOptions: {
             column: {
                 depth: 25
-            }
+            }                                                                                                                                                                                                                       
         },
         xAxis: {
             categories: Highcharts.getOptions().lang.shortMonths
@@ -37,7 +37,7 @@ $(function () {
            { name: 'type E5205',
             data: [4,8,1,9,5,9,2,7,2,null]},
             { name: 'type E4078',
-            data: [8,5,1,9,8,4,1,10,5,1]}
+            data: [8,5,1,9,8,4,1,10,5,1]}                                                                                   
           ]
     });
 });
