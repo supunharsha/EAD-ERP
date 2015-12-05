@@ -5,11 +5,9 @@ var express          = require('express'),
 	//reload 			 = require('reload'),
     app     	     = express();	
 	
-<<<<<<< HEAD
 
-=======
 mongoose.connect('mongodb://localhost:27017/EAD');
->>>>>>> 673f5530523414077e26271294f6967ec91fc06a
+
 app.use(bodyParser());
 
 app.get('/',function(req,res){
@@ -19,15 +17,16 @@ app.get('/signup.html',function(req,res){
 	res.sendFile(__dirname+'/client/views/signup.html');
 });
 
-<<<<<<< HEAD
 
-=======
 app.post('/production/addget',serverController.add);
 app.get('/production/addget',serverController.get);
+app.post('/production/remove',serverController.removeProduct);
+app.post('/production/update',serverController.updateProduct);
 
 app.post('/inventry/add',serverController.addInventry);
 app.get('/inventry/add',serverController.getInventry);
->>>>>>> 673f5530523414077e26271294f6967ec91fc06a
+
+
 
 app.use(express.static('client'));
 
